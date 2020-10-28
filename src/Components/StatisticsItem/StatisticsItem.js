@@ -4,7 +4,7 @@ import React from "react";
 
 const StatisticsItem = ({ label, percentage }) => {
   return (
-    <li className="item" style={{ backgroundColor: random_rgba() }}>
+    <li className="item" style={{ backgroundColor: random_rgb() }}>
       <span className="label">{label}</span>
       <span className="percentage">{percentage}%</span>
     </li>
@@ -13,19 +13,9 @@ const StatisticsItem = ({ label, percentage }) => {
 
 export default StatisticsItem;
 
-function random_rgba() {
-  var o = Math.round,
+function random_rgb() {
+  var o = Math.floor,
     r = Math.random,
-    s = 255;
-  return (
-    "rgba(" +
-    o(r() * s) +
-    "," +
-    o(r() * s) +
-    "," +
-    o(r() * s) +
-    "," +
-    r().toFixed(1) +
-    ")"
-  );
+    s = 256;
+  return "rgb(" + o(r() * s) + "," + o(r() * s) + "," + o(r() * s) + ")";
 }
