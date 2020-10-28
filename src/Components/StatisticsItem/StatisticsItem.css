@@ -1,0 +1,6 @@
+.stat-list > .item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: #212121;
+}

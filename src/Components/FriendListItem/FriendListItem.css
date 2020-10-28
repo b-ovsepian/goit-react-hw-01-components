@@ -1,0 +1,35 @@
+/*
+    <li className="item">
+      <span className="status"></span>
+      <img className="friend-avatar" src={avatar} alt={name} width="48" />
+      <p className="name">{name}</p>
+    </li>
+*/
+.friend-list > .item {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+.status {
+  display: block;
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 15px;
+  background-color: red;
+}
+.status.green {
+  background-color: green;
+}
+
+.friend-avatar {
+  border-radius: 4px;
+  display: block;
+  max-width: 100%;
+  height: auto;
+
+  margin-right: 20px;
+}
